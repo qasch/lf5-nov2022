@@ -1,5 +1,4 @@
-# Auswahl(menu) anzeigen
-# Benutzer nach Rechenoperation fragen
+# Auswahlmenu anzeigen
 auswahlmenu = """
 Welche Rechenoperation soll durchgeführt werden?
 
@@ -7,38 +6,40 @@ Welche Rechenoperation soll durchgeführt werden?
 [2] subtraktion (-)
 [3] mulitplikation (*)
 [4] division (/)
+
 """
 
-# NOTE: Division durch 0 ist nicht erlaubt!
 
+# Benutzer nach der gewünschten Rechenoperation fragen
 eingabe = input(auswahlmenu)
 
 # Benutzer nach zwei Zahlen fragen
-zahl1 = input("Bitte erste Zahl eingeben: ")
-zahl2 = input("Bitte zweite Zahl eingeben: ")
+# Falls es beim Casting zu einem Fehler (Exception) kommen sollte,
+# entsprechende Meldung ausgeben und Programm beenden
+try:
+    zahl1 = float(input("Bitte erste Zahl eingeben: "))
+    zahl2 = float(input("Bitte zweite Zahl eingeben: "))
+except Exception:
+    print("ERROR: Beim Casting ist ein Fehler aufgetreten!")
+    print("Programm wird beendet.")
+    exit(1)
 
-# Wenn Auswahl richtig
 if eingabe == "1":
-    print("addition")
-    # TODO: Eingabe prüfen!
+    print("Addition")
     # Rechenoperation durchführen
-    ergebnis = float(zahl1) + float(zahl2)
-    # NOTE: Beste Stelle zur Ausgabe von ergebnis?
-    print(ergebnis)
+    ergebnis = zahl1 + zahl2
+    print("Das Ergebnis der Addition von " + str(zahl1) + " und " + str(zahl2) + " ist " + str(ergebnis))
 elif eingabe == "4":
-    print("division")
+    print("Division")
     # Benutzer nach zwei Zahlen fragen
     # Redundanz -> (immer) zu vermeiden!
     # zahl1 = input("Bitte erste Zahl eingeben: ")
     # zahl2 = input("Bitte zweite Zahl eingeben: ")
-    # TODO: Eingabe prüfen!
-    # Rechenoperation durchführen
-    if zahl2 != "0":
-        ergebnis = float(zahl1) / float(zahl2)
-        print("Das Ergebnis der Division ist " + str(ergebnis))
+    # NOTE: Division durch 0 ist nicht erlaubt -> Prüfung
+    if zahl2 != 0.0:
+        ergebnis = zahl1 / zahl2
+        print("Das Ergebnis der Division von " + str(zahl1) + " und " + str(zahl2) + " ist " + str(ergebnis))
     else:
-        print("Division durch 0 ist nicht zulässig.")
-    # NOTE: Beste Stelle zur Ausgabe von ergebnis?
+        print("Die Division durch 0 ist nicht zulässig!")
 else:
-    print("Falsche Eingabe")
-# Ergebnis ausgeben
+    print("Falsche Eingabe. Bitte eine Zahl zwischen 1 und 4 eingeben.")
