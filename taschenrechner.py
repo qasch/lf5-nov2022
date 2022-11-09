@@ -19,10 +19,12 @@ eingabe = input(auswahlmenu)
 try:
     zahl1 = float(input("Bitte erste Zahl eingeben: "))
     zahl2 = float(input("Bitte zweite Zahl eingeben: "))
-except Exception:
+except ValueError:
     print("ERROR: Beim Casting ist ein Fehler aufgetreten!")
     print("Programm wird beendet.")
-    exit(1)
+    exit(1)   # Beende das Programm, gib zurück, dass es zu einem Fehler gekommen ist.
+except Exception:
+    print("Es ist ein anderer Fehler aufgetreten")
 
 if eingabe == "1":
     print("Addition")
@@ -43,3 +45,5 @@ elif eingabe == "4":
         print("Die Division durch 0 ist nicht zulässig!")
 else:
     print("Falsche Eingabe. Bitte eine Zahl zwischen 1 und 4 eingeben.")
+
+exit(0)
