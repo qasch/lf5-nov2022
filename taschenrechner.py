@@ -13,12 +13,13 @@ Welche Rechenoperation soll durchgeführt werden?
 
 eingabe = input(auswahlmenu)
 
+# Benutzer nach zwei Zahlen fragen
+zahl1 = input("Bitte erste Zahl eingeben: ")
+zahl2 = input("Bitte zweite Zahl eingeben: ")
+
 # Wenn Auswahl richtig
 if eingabe == "1":
     print("addition")
-    # Benutzer nach zwei Zahlen fragen
-    zahl1 = input("Bitte erste Zahl eingeben: ")
-    zahl2 = input("Bitte zweite Zahl eingeben: ")
     # TODO: Eingabe prüfen!
     # Rechenoperation durchführen
     ergebnis = float(zahl1) + float(zahl2)
@@ -27,16 +28,17 @@ if eingabe == "1":
 elif eingabe == "4":
     print("division")
     # Benutzer nach zwei Zahlen fragen
-    zahl1 = input("Bitte erste Zahl eingeben: ")
-    zahl2 = input("Bitte zweite Zahl eingeben: ")
+    # Redundanz -> (immer) zu vermeiden!
+    # zahl1 = input("Bitte erste Zahl eingeben: ")
+    # zahl2 = input("Bitte zweite Zahl eingeben: ")
     # TODO: Eingabe prüfen!
     # Rechenoperation durchführen
     if zahl2 != "0":
         ergebnis = float(zahl1) / float(zahl2)
+        print("Das Ergebnis der Division ist " + str(ergebnis))
     else:
-        ergebnis = print("Division durch 0 ist nicht zulässig.")
+        print("Division durch 0 ist nicht zulässig.")
     # NOTE: Beste Stelle zur Ausgabe von ergebnis?
-    print(ergebnis)
 else:
     print("Falsche Eingabe")
 # Ergebnis ausgeben
