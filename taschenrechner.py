@@ -28,7 +28,7 @@ except Exception:
 
 if eingabe == "1":
     rechenoperation ="Addition"
-    ergebnis = zahl1 + zahl2
+    ergebnis = zahl1 + zahl
 elif eingabe == "2":
     rechenoperation ="Subtraktion"
     ergebnis = zahl1 - zahl2
@@ -49,11 +49,19 @@ elif eingabe == "4":
     # NOTE: Besserer Weg als oben: Benutzer kann wiederholt die zweite Zahl eingeben
     while zahl2 == 0:
         print("Die Division durch 0 ist nicht zulässig!")
-        zahl2 = float(input("Zahl 2 darf nicht 0 sein. Bitte erneut eingeben: "))
+        zahl2 = float(input("Zahl 2 darf nicht 0 sein. Bitte erneut eingeben: "));
     else:
         ergebnis = zahl1 / zahl2
 else:
     print("Falsche Eingabe. Bitte eine Zahl zwischen 1 und 4 eingeben.")
 
-# Ausgabe des Ergebnisses
-print("Das Ergebnis der " + rechenoperation + " von " + str(zahl1) + " und " + str(zahl2) + " ist " + str(ergebnis))
+# Ausgabe des Ergebnisses mit Stringkonkatenation
+# print("Das Ergebnis der " + rechenoperation + " von " + str(zahl1) + " und " + str(zahl2) + " ist " + str(ergebnis))
+
+# Ausgabe des Ergebnisses mit String Format
+# print("Das Ergebnis der {0} von {1} und {2} ist {3}.".format(rechenoperation, zahl1, zahl2, ergebnis))
+
+# Ausgabe mit F-String
+print(f"Das Ergebnis der {rechenoperation} von {zahl1} und {zahl2} ist {ergebnis}.")
+
+
