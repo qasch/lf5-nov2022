@@ -22,6 +22,9 @@ def gib_aus_was_ich_uebergebe(text):
 # müssen beim Aufruf der Funktion auch die gleiche Anzahl an
 # Argumenten übergeben werden
 def addiere(zahl1, zahl2):
+    """addiere zahl1 und zahl2 und gib das Ergebnis zurück
+    Das hier ist ein Docstring, eine Beschreibung der Funktion.
+    Gehört streng genommen zu jeder Funktion (laut PEP8)""" 
     ergebnis = zahl1 + zahl2
     # print(ergebnis) # String wird ausgedruckt
     return ergebnis  # Inhalt von Ergebnis wird zurückgegeben
