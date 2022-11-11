@@ -1,7 +1,7 @@
 # Verschiedene Benutzereingaben
 
-print("Du hast eingegeben: " + eingabe)
 eingabe = input("Gib doch mal irgendetwas ein:")
+print("Du hast eingegeben: " + eingabe)
 
 
 

@@ -27,6 +27,6 @@ print(type(platz))
 #"input"   # String, kein Builtin, keine Variable, nur Text
 
 # Datei mit Name datentypen.py
-# Integer, String, Boolean
+# Integer, String, Float, Boolean
 # für jeden Datentyp eine Variable mit konkretem Wert
 # Ausgabe für jede Variable nach Schema "zahl ist vom Typ: <class 'int'>"

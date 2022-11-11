@@ -26,6 +26,11 @@ def addiere(zahl1, zahl2):
     # print(ergebnis) # String wird ausgedruckt
     return ergebnis  # Inhalt von Ergebnis wird zurückgegeben
 
+
+# Führt zu Fehler, da bei der Definition zwei Parameter angegeben sind
+# beim Aufruf aber nur ein Argument übergeben wird
+# addiere(3)
+
 # Aufruf der Funktionen
 gib_etwas_aus()
 
@@ -63,9 +68,9 @@ print()
 # print(gueltigkeitsbereich())
 # print(var)   # enthält immer noch "Variable"
 
-# var = "Variable"
+# var = "Variable"    # globale Variable var
 # def gueltigkeitsbereich():
-#     var = "Variable"
+#     var = "Variable"       # lokale Variabel var
 #     var = var + "ngueltigkeitsbereich"
 #     return var
 #

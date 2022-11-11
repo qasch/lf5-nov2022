@@ -38,13 +38,13 @@ while True:
         print("Es ist irgendein anderer Fehler aufgetreten")
 
     if eingabe == "1":
-        rechenoperation ="Addition"
+        rechenoperation = "Addition"
         ergebnis = zahl1 + zahl2
     elif eingabe == "2":
-        rechenoperation ="Subtraktion"
+        rechenoperation = "Subtraktion"
         ergebnis = zahl1 - zahl2
     elif eingabe == "3":
-        rechenoperation ="Mulitplikation"
+        rechenoperation = "Mulitplikation"
         ergebnis = zahl1 * zahl2
     elif eingabe == "4":
         rechenoperation = "Division"
